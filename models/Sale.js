@@ -15,4 +15,4 @@ const saleSchema = new mongoose.Schema({
   }
 }, { timestamps: true });
 
-module.exports = mongoose.model("Sale", saleSchema);
+module.exports = mongoose.model("Sale", saleSchema, "agents");

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sales Leaderboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container py-4">
+  <!-- Simple form to add a sale -->
+  <form action="/sales" method="POST" class="mb-4">
+    <div class="row g-2 align-items-center">
+      <div class="col-sm-4">
+        <input name="agent" required class="form-control" placeholder="Agent name">
+      </div>
+      <div class="col-sm-3">
+        <input name="amount" required type="number" class="form-control" placeholder="Amount">
+      </div>
+      <div class="col-sm-3">
+        <input name="deals" required type="number" class="form-control" placeholder="Deals">
+      </div>
+      <div class="col-sm-2">
+        <button class="btn btn-primary w-100">Add Sale</button>
+      </div>
+    </div>
+  </form>
+
+  <h2>🏆 Today's Leaderboard</h2>
+  <table class="table table-bordered mt-3">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Agent</th>
+        <th>Total Sales</th>
+        <th>Total Deals</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% leaderboard.forEach(item => { %>
+        <tr>
+          <td><%= item.rank %></td>
+          <td><%= item.agent %></td>
+          <td>Rs. <%= item.totalSales %></td>
+          <td><%= item.totalDeals %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>
