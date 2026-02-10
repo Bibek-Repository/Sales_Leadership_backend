@@ -39,7 +39,7 @@ Sales-Leadership-Dashboard/
 │   └─ css/                     # Static files (stylesheets)
 │
 ├─ .env                         # Environment variables
-├─ server.js                     # Entry point of the application
+├─ server.js                     
 ├─ package.json                  # Project dependencies
 └─ README.md                     # Project documentation
 
