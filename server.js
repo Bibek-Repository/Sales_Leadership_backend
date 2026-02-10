@@ -22,7 +22,7 @@ app.use('/sales', require('./routes/salesRoutes'));
 
 // Root route
 app.get('/', (req, res) => {
-    res.send('Sales Leaderboard Backend is running!');
+    res.render('leaderboard');
 });
 
 app.listen(PORT, () => {
